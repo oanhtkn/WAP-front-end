@@ -1,0 +1,61 @@
+.containerForm {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.formLabel {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.countryContainer {
+  display: flex;
+  align-items: center;
+}
+
+.flag {
+  width: 48px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+.formBtn {
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  margin-left: 15rem;
+  font-size: 1.25rem;
+  background-color: #aa0000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.formBtn:hover {
+  background-color: #b34d4d;
+}
+
+.formHeading {
+  margin-bottom: 3rem;
+}

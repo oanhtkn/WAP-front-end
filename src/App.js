@@ -1,25 +1,63 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./pages/Home";
+import LoginPage from "./pages/Login";
+import NewTournamentPage from "./pages/NewTournament";
+import TournamentsPage from "./pages/Tournaments";
+import TournamentsRootPage from "./pages/TournamentsRoot";
+import TournamentDetailsPage from "./pages/TournamentDetails";
+import RootPage from "./pages/Root";
+import DashboardPage from "./pages/Dashboard";
+import RegisterPage from "./pages/Register";
+import ErrorPage from "./pages/Errorpage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  // TODO: errror element
+  const router = createBrowserRouter([
+    {
+      path: "",
+      element: <RootPage />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          index: true,
+          element: <HomePage />,
+        },
+        {
+          path: "tournaments",
+          element: <TournamentsRootPage />,
+          children: [
+            {
+              path: "",
+              element: <TournamentsPage />,
+            },
+            {
+              path: ":id",
+              element: <TournamentDetailsPage />,
+            },
+            {
+              path: "new",
+              element: <NewTournamentPage />,
+            },
+          ],
+        },
+        {
+          path: "dashboard",
+          element: <DashboardPage />,
+        },
+      ],
+    },
+    {
+      path: "login",
+      element: <LoginPage />,
+    },
+    {
+      path: "register",
+      element: <RegisterPage />,
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;

@@ -1,0 +1,69 @@
+.containerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  margin: 0 auto;
+  margin-left: 15rem;
+  margin-top: 10rem;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formLabel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.formInput {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.formBtn {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #aa0000;
+}
+
+.formBtn:hover {
+  background-color: #b34d4d;
+}
+.loginText {
+  text-align: center;
+  color: red;
+  margin-top: 2rem;
+}
+
+.createAccountText {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.createAccountText a {
+  display: block;
+  text-decoration: underline;
+  color: red;
+}
